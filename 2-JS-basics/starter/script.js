@@ -87,29 +87,53 @@
 /**************
  * Operator precedence
  */
-var now = 2018;
-var yearJohn = 1989;
-var fullAge = 18;
+// var now = 2018;
+// var yearJohn = 1989;
+// var fullAge = 18;
 
-// Multiple operators
-var isFullAge = now - yearJohn >= fullAge; // true
-console.log(isFullAge);
+// // Multiple operators
+// var isFullAge = now - yearJohn >= fullAge; // true
+// console.log(isFullAge);
 
-// Grouping
-var ageJohn = now - yearJohn;
-var ageMark = 35;
-var average = (ageJohn + ageMark) / 2;
-console.log(average);
+// // Grouping
+// var ageJohn = now - yearJohn;
+// var ageMark = 35;
+// var average = (ageJohn + ageMark) / 2;
+// console.log(average);
 
-// Multiple assignments
-var x, y;
-x = y = (3 + 5) * 4 - 6; // 8 * 4 - 6 // 32 - 6 // 26
-console.log(x, y);
+// // Multiple assignments
+// var x, y;
+// x = y = (3 + 5) * 4 - 6; // 8 * 4 - 6 // 32 - 6 // 26
+// console.log(x, y);
 
-// More operators
-x *= 2;
-console.log(x);
-x += 10;
-console.log(x);
-x--;
-console.log(x);
+// // More operators
+// x *= 2;
+// console.log(x);
+// x += 10;
+// console.log(x);
+// x--;
+// console.log(x);
+
+/*********
+ * Code Challenge
+ */
+
+// var BMI = (mass / height) ^ 2;
+//  mass / (height * height);
+//  mass in kg and height in meters
+
+let jMass = 80;
+let jHeight = 4;
+let mMass = 60;
+let mHeight = 5;
+
+var jBMI = (jMass / jHeight) ^ 2;
+console.log(jBMI);
+
+var mBMI = (mMass / mHeight) ^ 2;
+console.log(mBMI);
+
+var isHigher = jBMI >= mBMI;
+// console.log(isHigher);
+
+console.log("is john's' BMI higher than + mark's? " + isHigher);
