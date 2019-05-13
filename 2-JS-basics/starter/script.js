@@ -79,8 +79,8 @@ var johnOlder = ageJohn < ageMark;
 console.log(johnOlder);
 
 // // typeof operator
-// console.log(typeof johnOlder);
-// console.log(typeof ageJohn);
-// console.log(typeof 'Mark is older tha John');
-// var x;
-// console.log(typeof x);
+console.log(typeof johnOlder);
+console.log(typeof ageJohn);
+console.log(typeof "Mark is older tha John");
+var x;
+console.log(typeof x);
