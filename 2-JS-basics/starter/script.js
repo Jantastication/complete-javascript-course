@@ -191,22 +191,22 @@
 /************
  * The Ternary Operator and Switch Statements
  */
-var firstName = "John";
-var age = 14;
+// var firstName = "John";
+// var age = 14;
 
-// Ternary operator
-age >= 18
-  ? console.log(firstName + " drinks beer.")
-  : console.log(firstName + " drinks juice.");
+// // Ternary operator
+// age >= 18
+//   ? console.log(firstName + " drinks beer.")
+//   : console.log(firstName + " drinks juice.");
 
-var drink = age >= 18 ? "beer" : "juice";
-console.log(drink);
+// var drink = age >= 18 ? "beer" : "juice";
+// console.log(drink);
 
-if (age >= 18) {
-  var drink = "beer";
-} else {
-  var drink = "juice";
-}
+// if (age >= 18) {
+//   var drink = "beer";
+// } else {
+//   var drink = "juice";
+// }
 
 // Switch statement
 // var job = "instructor";
@@ -246,17 +246,103 @@ if (age >= 18) {
 // falsy values: undefined, null, 0, '', NaN
 // truthy values: NOT falsy values
 
-var height;
+// var height;
 
-height = 23;
+// height = 23;
 
-if (height || height === 0) {
-  console.log("Variable is defined");
+// if (height || height === 0) {
+//   console.log("Variable is defined");
+// } else {
+//   console.log("Variable has NOT been defined");
+// }
+
+// // Equality operators
+// if (height === "23") {
+//   console.log("The == operator does type coercion!");
+// }
+/************
+ * Code Challenge
+ */
+
+var j = "teamJohn";
+var m = "teamMike";
+var y = "teamMary";
+
+jGame1 = 89;
+jGame2 = 120;
+jGame3 = 103;
+
+mGame1 = 116;
+mGame2 = 94;
+mGame3 = 123;
+
+yGame1 = 97;
+yGame2 = 134;
+yGame3 = 105;
+
+let jAv = (jGame1 + jGame2 + jGame3) / 3;
+console.log(jAv);
+
+let mAv = (mGame1 + mGame2 + mGame3) / 3;
+console.log(mAv);
+
+let yAv = (yGame1 + yGame2 + yGame3) / 3;
+console.log(yAv);
+
+// if (jAv > mAv) {
+//   console.log(
+//     j +
+//       " " +
+//       "is the winner of the average score with" +
+//       " " +
+//       jAv +
+//       " " +
+//       "points"
+//   );
+// } else if (mAv > jAv) {
+//   console.log(
+//     m +
+//       " " +
+//       "is the winner of the average score with" +
+//       " " +
+//       mAv +
+//       " " +
+//       "points"
+//   );
+// } else {
+//   console.log(j + " and " + m + " " + "drew");
+// }
+
+if (jAv > mAv && jAv > yAv) {
+  console.log(
+    j +
+      " " +
+      "is the winner of the average score with" +
+      " " +
+      jAv +
+      " " +
+      "points"
+  );
+} else if (mAv > jAv && mAv > yAv) {
+  console.log(
+    m +
+      " " +
+      "is the winner of the average score with" +
+      " " +
+      mAv +
+      " " +
+      "points"
+  );
+} else if (yAv > jAv && yAv > mAv) {
+  console.log(
+    y +
+      " " +
+      "is the winner of the average score with" +
+      " " +
+      yAv +
+      " " +
+      "points"
+  );
 } else {
-  console.log("Variable has NOT been defined");
-}
-
-// Equality operators
-if (height === "23") {
-  console.log("The == operator does type coercion!");
+  console.log(j + " " + m + " and " + y + " " + "drew");
 }
