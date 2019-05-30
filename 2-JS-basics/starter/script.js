@@ -264,30 +264,30 @@
  * Code Challenge
  */
 
-var j = "teamJohn";
-var m = "teamMike";
-var y = "teamMary";
+// var j = "teamJohn";
+// var m = "teamMike";
+// var y = "teamMary";
 
-jGame1 = 89;
-jGame2 = 120;
-jGame3 = 103;
+// jGame1 = 89;
+// jGame2 = 120;
+// jGame3 = 103;
 
-mGame1 = 116;
-mGame2 = 94;
-mGame3 = 123;
+// mGame1 = 116;
+// mGame2 = 94;
+// mGame3 = 123;
 
-yGame1 = 97;
-yGame2 = 134;
-yGame3 = 105;
+// yGame1 = 97;
+// yGame2 = 134;
+// yGame3 = 105;
 
-let jAv = (jGame1 + jGame2 + jGame3) / 3;
-console.log(jAv);
+// let jAv = (jGame1 + jGame2 + jGame3) / 3;
+// console.log(jAv);
 
-let mAv = (mGame1 + mGame2 + mGame3) / 3;
-console.log(mAv);
+// let mAv = (mGame1 + mGame2 + mGame3) / 3;
+// console.log(mAv);
 
-let yAv = (yGame1 + yGame2 + yGame3) / 3;
-console.log(yAv);
+// let yAv = (yGame1 + yGame2 + yGame3) / 3;
+// console.log(yAv);
 
 // if (jAv > mAv) {
 //   console.log(
@@ -313,36 +313,89 @@ console.log(yAv);
 //   console.log(j + " and " + m + " " + "drew");
 // }
 
-if (jAv > mAv && jAv > yAv) {
-  console.log(
-    j +
-      " " +
-      "is the winner of the average score with" +
-      " " +
-      jAv +
-      " " +
-      "points"
-  );
-} else if (mAv > jAv && mAv > yAv) {
-  console.log(
-    m +
-      " " +
-      "is the winner of the average score with" +
-      " " +
-      mAv +
-      " " +
-      "points"
-  );
-} else if (yAv > jAv && yAv > mAv) {
-  console.log(
-    y +
-      " " +
-      "is the winner of the average score with" +
-      " " +
-      yAv +
-      " " +
-      "points"
-  );
-} else {
-  console.log(j + " " + m + " and " + y + " " + "drew");
+// if (jAv > mAv && jAv > yAv) {
+//   console.log(
+//     j +
+//       " " +
+//       "is the winner of the average score with" +
+//       " " +
+//       jAv +
+//       " " +
+//       "points"
+//   );
+// } else if (mAv > jAv && mAv > yAv) {
+//   console.log(
+//     m +
+//       " " +
+//       "is the winner of the average score with" +
+//       " " +
+//       mAv +
+//       " " +
+//       "points"
+//   );
+// } else if (yAv > jAv && yAv > mAv) {
+//   console.log(
+//     y +
+//       " " +
+//       "is the winner of the average score with" +
+//       " " +
+//       yAv +
+//       " " +
+//       "points"
+//   );
+// } else {
+//   console.log(j + " " + m + " and " + y + " " + "drew");
+// }
+
+/********
+ * Functions
+ */
+
+function calculateAge(birthYear) {
+  return 2018 - birthYear;
 }
+
+var ageJohn = calculateAge(1990);
+var ageMike = calculateAge(1986);
+var ageJane = calculateAge(1989);
+console.log(ageJohn, ageJane, ageMike);
+
+function yearsUntilRetirement(year, firstName) {
+  var age = calculateAge(year);
+  var retirement = 65 - age;
+
+  if (retirement > 0) {
+    console.log(firstName + " retires in " + retirement + " years.");
+  } else {
+    console.log(firstName + " is already retired.");
+  }
+}
+
+yearsUntilRetirement(1990, "John");
+yearsUntilRetirement(1948, "Mike");
+yearsUntilRetirement(1969, "Jane");
+
+/*****************************
+ * Function Statements and Expressions
+ */
+
+//Function declaration
+//function whatDoYouDo(job, firstName) {}
+
+// Function expression
+var whatDoYouDo = function(job, firstName) {
+  switch (job) {
+    case "teacher":
+      return firstName + " teaches kids how to code";
+    case "driver":
+      return firstName + " drives a cab in Lisbon.";
+    case "designer":
+      return firstName + " designs beautiful websites";
+    default:
+      return firstName + " does something else";
+  }
+};
+
+console.log(whatDoYouDo("teacher", "John"));
+console.log(whatDoYouDo("designer", "Jane"));
+console.log(whatDoYouDo("retired", "Mark"));
